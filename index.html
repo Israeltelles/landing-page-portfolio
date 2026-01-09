@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Isreal | Dev</title>
+</head>
+<body>
+    <div class="particulas"></div>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a  href="#inicio" class="menu-link">Inicio</a>
+            </li>
+            <li>
+                <a  href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projeto" class="menu-link">Projeto</a>
+            </li>
+            <li>
+                <a href="#contato" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="img/foto-perfil2.jpeg" alt="Foto de Israel" class="foto-perfil">
+        <h1>Israel Telles</h1>
+        <p class="subtitulo">Desenvolvedor Jr.</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <h3 class="hello-world">Hello World!</h3>
+            <p class="sobre-paragrafo">
+               Sou estudante de Análise e Desenvolvimento de Sistemas, iniciando minha carreira em programação. 
+               Tenho experiência com Python, C#, PHP (Backend), HTML, CSS e bancos de dados SQL Server e MySQL. 
+               Desenvolvo projetos acadêmicos e pessoais, incluindo sistemas CRUD e automações em Python. 
+               Busco oportunidades para atuar como desenvolvedor júnior e evoluir na área de tecnologia.
+            </p>
+            <p class="sobre-paragrafo"><strong>Entre em contato para saber mais!</strong></p>
+            
+        </div>
+    </section>
+
+    <section id="projeto" class="projeto">
+        <h2 class="projeto-titulo">Meus Projetos</h2>
+        <div class="projeto-caixa">
+
+        <a href="https://github.com/Israeltelles/projetoETL" target="_blank" class="projeto-card-link">
+            <div class="projeto-card">
+                <div class="projeto-card-img-wrapper">
+                <img src="img/ETL.png" alt="Foto Projeto" class="projeto-card-img">
+            </div>
+                <h3 class="info-projeto">ETL Process em Python</h3>
+                <div class="caixa-texto-projeto">
+                <p class="paragrafo-projeto">Primeiro projeto realizado em Python. Ele coleta dados de arquivos do banco do Ibovespa e os organiza por ano. Após a coleta, 
+                    remove informações desnecessárias e cria um novo arquivo tratado, além de unificar dados de anos diferentes</p>
+                </div>    
+            </div>
+        </a>
+
+        <a href="https://github.com/Israeltelles/gestao-funcionario" target="_blank" class="projeto-card-link">
+            <div class="projeto-card">
+                <div class="projeto-card-img-wrapper">
+                    <img src="img/gestao.png" alt="Foto Projeto" class="projeto-card-img">
+                </div>
+                <h3 class="info-projeto">Projeto em Desenvolvimento - Sistema de Gestão de Funcionários (C#)</h3>
+                <div class="caixa-texto-projeto">
+                <p class="paragrafo-projeto">Sistema desktop desenvolvido em C# com foco no aprendizado de desenvolvimento de sistemas e aplicação de regras de negócio. 
+                    Permite o cadastro, atualização e exclusão de funcionários, utilizando uma estrutura organizada, boas práticas de código e modelagem simples voltada ao contexto empresarial.
+                    Projeto em desenvolvimento contínuo
+                </p>
+                </div>    
+            </div>
+        </a>
+
+        <a href="https://github.com/Israeltelles/analise-dados-indicadores" target="_blank" class="projeto-card-link">
+            <div class="projeto-card">
+                <div class="projeto-card-img-wrapper">
+                    <img src="img/analiseGestao.jpg" alt="Foto Projeto" class="projeto-card-img">
+                </div>
+                <h3 class="info-projeto">Análise de Dados e Indicadores (em planejamento)</h3>
+                <div class="caixa-texto-projeto">
+                <p class="paragrafo-projeto">PProjeto em fase de planejamento com o objetivo de desenvolver um módulo de análise de dados integrado a sistemas de gestão. 
+                    A proposta é trabalhar organização de dados, geração de indicadores e relatórios analíticos para apoio à tomada de decisão, 
+                    conectando dados operacionais a uma visão estratégica do negócio
+                </p>
+                </div>    
+            </div>
+        </a>
+            
+        </div>    
+            
+    </section>
+    <section id="contato" class="contato">
+        <h2 class="contato-titulo">Contato</h2>
+        <form class="formulario-contato" id="formulario">
+        <div class="grupo-form">
+            <input placeholder="Nome" class="campo-form" id="nome">
+        </div>
+        <div class="grupo-form">
+            <textarea class="campo-form" placeholder="Digite sua Mensagem" id="mensagem" rows="6"></textarea>
+        </div>
+        <div class="bottom-form">
+            <button class="botao-form" type="submit">Enviar mensagem</button>
+        </div>
+        </form>
+        <div class="contato-icones">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=israeltelles2018@gmail.com&su=Contato%20do%20Portfólio&body=Olá,%20vi%20seu%20portfólio%20e%20gostaria%20de%20entrar%20em%20contato." target="_blank">  
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://github.com/Israeltelles" target="_blank">  
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/israel-telles/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>    
+        </div> 
+    </section>
+
+<script>
+    const form = document.getElementById('formulario');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const nome = document.getElementById('nome').value;
+        const mensagem = document.getElementById('mensagem').value;
+
+        const telefone = '5519978279101';
+        const texto = `Olá! Me chamo ${nome}. ${mensagem}`;
+        const msgFormatada = encodeURIComponent(texto);
+        const link = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+        window.open(link, '_blank');
+    });
+</script>
+
+</body>
+</html>
